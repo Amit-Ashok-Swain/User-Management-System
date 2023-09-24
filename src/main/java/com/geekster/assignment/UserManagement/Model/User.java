@@ -17,7 +17,7 @@ public class User {
     private Integer userId;
 
     @NotBlank
-    @Pattern(regexp = "^[a-zA-Z ]+$")
+    @Pattern(regexp = "^[A-Za-z ]+$", message = "Only alphabets and spaces are allowed")
     private String userName;
 
     private Type type;
@@ -29,7 +29,7 @@ public class User {
     private String userEmail;
 
     @Size(min = 12,max = 12)
-    @Pattern( regexp = "91[0-9]{10}$",message = "Enter a Valid Phone Number,Phone number must start with 91 and be followed by 10 digits")
+    @Pattern( regexp = "9[0-9]{10}$",message = "Enter a Valid Phone Number,Phone number must start with 91 and be followed by 10 digits")
     private  String userContactNo;
 
     @NotNull(message = "Date cannot be null")
